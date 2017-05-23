@@ -1,4 +1,5 @@
 
-public class Graphic.java
+public class Graphic
 {
+  System.out.println("MEME");
 }
