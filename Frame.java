@@ -198,7 +198,285 @@ public class Frame  extends JFrame {
 			
 			
 			
+			public void QuestionScreen1()
+			{
+				remove(questionPanel);
+				questionPanel1 = new JPanel();
+				
+				JPanel questionLabels = new JPanel();
+				
+				questionPanel1.setLayout(new BorderLayout());
+				
+				questionLabels.setBackground(Color.black);
+				questionPanel1.setBackground(Color.black);
+				
+				
+				JPanel go = new JPanel();
+				final JButton clickGo = new JButton("Continue");
+				clickGo.addActionListener(new ActionListener()
+				{
+					public void actionPerformed(ActionEvent e)
+					{
+						QuestionScreen2();
+					}
+				});
+				go.add(clickGo);
+				
+				JLabel choosen = new JLabel("");
+				
+				JLabel label = new JLabel("<html><h1>------------------------------------------------------<br>" +
+		 				"Onto next question...<br>" +
+		 				"------------------------------------------------------<br>" +
+		 				"You are in the classroom and the kid next to you spills drink all over you. You don't know if he did it on purpose or on accident.<br>"+
+		 				"He says he is terribly sorry. What do you do?<br>"+
+		 				"------------------------------------------------------<br>"+
+		 				"1 = Forgive him and continue class in soaking clothes<br>"+
+		 				"2 = Leave to go to bathroom to change clothes<br>"+
+		 				"3 = Punch the kid in the face<br>"+
+		 				"------------------------------------------------------<br></h1></html>");
+				label.setForeground(Color.white);
+				Font font = new Font("Helvetica", Font.PLAIN, 18);
+				label.setFont(font);
 			
+			    ImageIcon	image1 = new ImageIcon(getClass().getResource("Button 1.png"));
+				JButton jb1 = new JButton(image1);
+				jb1.setContentAreaFilled(false);
+					//jb1.setBorderPainted(false);
+				jb1.addActionListener(new ActionListener()
+				{
+					public void actionPerformed(ActionEvent e)
+					{
+						clickGo.setText("You have choosen one");
+					}
+				});
+				
+				ImageIcon image2 = new ImageIcon(getClass().getResource("Button 2.png"));
+				JButton jb2 = new JButton(image2);
+				jb2.setContentAreaFilled(false);
+				jb2.addActionListener(new ActionListener()
+				{
+					public void actionPerformed(ActionEvent e)
+					{
+						clickGo.setText("You have choosen two");
+					}
+				});
+				
+				ImageIcon image3 = new ImageIcon(getClass().getResource("Button 3.png"));
+				JButton jb3 = new JButton(image3);
+				jb3.setContentAreaFilled(false);	
+				jb3.addActionListener(new ActionListener()
+				{
+					public void actionPerformed(ActionEvent e)
+					{
+						clickGo.setText("You have choosen three");
+					}
+				});
+				
+				
+			
+				questionLabels.add(choosen);
+				questionLabels.add(jb1);
+				questionLabels.add(jb2);
+				questionLabels.add(jb3);
+				//labels.add(choosen);
+			
+				questionPanel1.add(label ,BorderLayout.NORTH);
+				questionPanel1.add(questionLabels, BorderLayout.CENTER);
+				questionPanel1.add(go, BorderLayout.SOUTH);
+			
+				add(questionPanel1);
+				repaint();
+				revalidate();
+				
+			}
+			
+			
+			
+			public void QuestionScreen2()
+				{
+				remove(questionPanel1);
+					questionPanel2 = new JPanel();
+					
+					JPanel questionLabels = new JPanel();
+					
+					questionPanel2.setLayout(new BorderLayout());
+					
+					questionLabels.setBackground(Color.black);
+					questionPanel2.setBackground(Color.black);
+					
+					
+					JPanel go = new JPanel();
+					final JButton clickGo = new JButton("Continue");
+					clickGo.addActionListener(new ActionListener()
+					{
+						public void actionPerformed(ActionEvent e)
+						{
+							QuestionScreen3();
+						}
+					});
+					go.add(clickGo);
+					
+					JLabel choosen = new JLabel("");
+					
+					JLabel label = new JLabel("<html><h1>------------------------------------------------------<br>" +
+			 				"Okay next question...<br>" +
+			 				"------------------------------------------------------<br>" +
+			 				"You are walking down the street heading to school and you encounter a homeless man sitting against the wallside.<br>"+
+			 				"He sees you walk by and asks you for spare change or any food. What do you do?<br>"+
+			 				"------------------------------------------------------<br>"+
+			 				"1 = Locate your wallet and give him cash<br>"+
+			 				"2 = Pull out your lunch box and give him some of your lunch clothes<br>"+
+			 				"3 = Ignore him<br>"+
+			 				"------------------------------------------------------<br></h1></html>");
+					label.setForeground(Color.white);
+					Font font = new Font("Helvetica", Font.PLAIN, 18);
+					label.setFont(font);
+				
+				    ImageIcon	image1 = new ImageIcon(getClass().getResource("Button 1.png"));
+					JButton jb1 = new JButton(image1);
+					jb1.setContentAreaFilled(false);
+						//jb1.setBorderPainted(false);
+					jb1.addActionListener(new ActionListener()
+					{
+						public void actionPerformed(ActionEvent e)
+						{
+							clickGo.setText("You have choosen one");
+						}
+					});
+					
+					ImageIcon image2 = new ImageIcon(getClass().getResource("Button 2.png"));
+					JButton jb2 = new JButton(image2);
+					jb2.setContentAreaFilled(false);
+					jb2.addActionListener(new ActionListener()
+					{
+						public void actionPerformed(ActionEvent e)
+						{
+							clickGo.setText("You have choosen two");
+						}
+					});
+					
+					ImageIcon image3 = new ImageIcon(getClass().getResource("Button 3.png"));
+					JButton jb3 = new JButton(image3);
+					jb3.setContentAreaFilled(false);	
+					jb3.addActionListener(new ActionListener()
+					{
+						public void actionPerformed(ActionEvent e)
+						{
+							clickGo.setText("You have choosen three");
+						}
+					});
+					
+					
+				
+					questionLabels.add(choosen);
+					questionLabels.add(jb1);
+					questionLabels.add(jb2);
+					questionLabels.add(jb3);
+					//labels.add(choosen);
+				
+					questionPanel2.add(label ,BorderLayout.NORTH);
+					questionPanel2.add(questionLabels, BorderLayout.CENTER);
+					questionPanel2.add(go, BorderLayout.SOUTH);
+				
+					add(questionPanel2);
+					repaint();
+					revalidate();
+			
+				}
+			
+			
+			
+		}
+	
+	public void QuestionScreen3()
+					{
+				remove(questionPanel2);
+						questionPanel3 = new JPanel();
+						
+						JPanel questionLabels = new JPanel();
+						
+						questionPanel3.setLayout(new BorderLayout());
+						
+						questionLabels.setBackground(Color.black);
+						questionPanel3.setBackground(Color.black);
+						
+						
+						JPanel go = new JPanel();
+						final JButton clickGo = new JButton("Continue");
+						clickGo.addActionListener(new ActionListener()
+						{
+							public void actionPerformed(ActionEvent e)
+							{
+								menuScreen();
+							}
+						});
+						go.add(clickGo);
+						
+						JLabel choosen = new JLabel("");
+						
+						JLabel label = new JLabel("<html><h1>------------------------------------------------------<br>" +
+				 				"My last question...<br>" +
+				 				"------------------------------------------------------<br>" +
+				 				"You are in a Labratory and there is a scientest that asks you questions that represent different scenerios.<br>"+
+				 				"He wants you to answer them. He injects meletonin hormone into your body. You then feel very drousy.<br>"+
+				 				"------------------------------------------------------<br>"+
+				 				"1 = Comply<br>"+
+				 				"2 = Attempt to Resist<br>"+
+				 				"3 = Comply<br>"+
+				 				"------------------------------------------------------<br></h1></html>");
+						label.setForeground(Color.white);
+						Font font = new Font("Helvetica", Font.PLAIN, 18);
+						label.setFont(font);
+					
+					    ImageIcon	image1 = new ImageIcon(getClass().getResource("Button 1.png"));
+						JButton jb1 = new JButton(image1);
+						jb1.setContentAreaFilled(false);
+							//jb1.setBorderPainted(false);
+						jb1.addActionListener(new ActionListener()
+						{
+							public void actionPerformed(ActionEvent e)
+							{
+								clickGo.setText("You have choosen one");
+							}
+						});
+						
+						ImageIcon image2 = new ImageIcon(getClass().getResource("Button 2.png"));
+						JButton jb2 = new JButton(image2);
+						jb2.setContentAreaFilled(false);
+						jb2.addActionListener(new ActionListener()
+						{
+							public void actionPerformed(ActionEvent e)
+							{
+								clickGo.setText("You have choosen two");
+							}
+						});
+						
+						ImageIcon image3 = new ImageIcon(getClass().getResource("Button 3.png"));
+						JButton jb3 = new JButton(image3);
+						jb3.setContentAreaFilled(false);	
+						jb3.addActionListener(new ActionListener()
+						{
+							public void actionPerformed(ActionEvent e)
+							{
+								clickGo.setText("You have choosen three");
+							}
+						});
+						
+						
+					
+						questionLabels.add(choosen);
+						questionLabels.add(jb1);
+						questionLabels.add(jb2);
+						questionLabels.add(jb3);
+						//labels.add(choosen);
+					
+						questionPanel3.add(label ,BorderLayout.NORTH);
+						questionPanel3.add(questionLabels, BorderLayout.CENTER);
+						questionPanel3.add(go, BorderLayout.SOUTH);
+					
+						add(questionPanel3);
+						repaint();
+						revalidate();
 			
 			
 			
@@ -210,7 +488,7 @@ public class Frame  extends JFrame {
 	
 	public void menuScreen()
 	{
-		remove(questionPanel);
+		remove(questionPanel3);
 		revalidate();
 		repaint();
 		
