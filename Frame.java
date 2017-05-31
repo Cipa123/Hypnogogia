@@ -123,8 +123,7 @@ public class Frame  extends JFrame {
 			{
 				public void actionPerformed(ActionEvent e)
 				{
-					//end();
-					//paintTest2();
+					menuScreen();
 				}
 			});
 			go.add(clickGo);
@@ -208,6 +207,44 @@ public class Frame  extends JFrame {
 			
 			
 		}
+	
+	public void menuScreen()
+	{
+		remove(questionPanel);
+		revalidate();
+		repaint();
+		
+		JPanel menuScreen = new JPanel();
+		
+		menuScreen.setLayout(new GridLayout(2,2));
+		
+		JPanel panelUpperL = new JPanel();
+		panelUpperL.setBackground(Color.RED);
+		
+		JPanel panelUpperR = new JPanel();
+		panelUpperR.setBackground(Color.BLUE);
+		
+		JPanel panelLowerL = new JPanel();
+		panelLowerL.setBackground(Color.GREEN);
+		
+		JPanel panelLowerR = new JPanel();
+		panelLowerR.setBackground(Color.BLACK);
+		
+		menuScreen.add(panelUpperL);
+		menuScreen.add(panelUpperR);
+		menuScreen.add(panelLowerL);
+		menuScreen.add(panelLowerR);
+		
+		add(menuScreen);
+		repaint();
+		revalidate();
+		
+		
+		
+		
+		
+		
+	}
 	public int stopThread()
 	{
 		return stopThread;
